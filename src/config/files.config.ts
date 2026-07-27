@@ -16,7 +16,7 @@ export const filesConfig = {
   // Single Source of Truth for Resume Document
   resume: {
     title: 'Yashas R — Resume Document',
-    url: 'https://docs.google.com/document/d/1IslRecknCLUK5gGx7VJPtfayLpNdYpPI/edit?usp=drive_link&ouid=114914823539295017593&rtpof=true&sd=true',
+    url: 'https://docs.google.com/document/d/1dHA4uLwFon9etgVy3QTdDZV5oYInCxw_/edit?usp=drive_link&ouid=114914823539295017593&rtpof=true&sd=true',
     fallbackLocalUrl: '/resume.pdf',
   },
 
