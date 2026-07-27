@@ -16,9 +16,7 @@ export const ResumeSection: React.FC = () => {
     <section id="resume" className="py-24 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="Curriculum Vitae"
           title="Resume"
-          subtitle="View Yashas R's verified resume document."
         />
 
         <motion.div
@@ -71,7 +69,7 @@ export const ResumeSection: React.FC = () => {
                   Education & GPA
                 </h4>
                 <p className="text-xs text-white font-semibold">St. Joseph's University (BCA)</p>
-                <p className="text-xs text-slate-300">CGPA: 8.7 (Consistently &gt; 8.5 SGPA)</p>
+                <p className="text-xs text-slate-300">CGPA: 8.7 </p>
                 <p className="text-xs text-slate-400">PUC: 96.7% | SSLC: 95%</p>
               </div>
 

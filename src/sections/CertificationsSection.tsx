@@ -18,7 +18,6 @@ export const CertificationsSection: React.FC = () => {
         <SectionHeading
           badge="Verified Credentials"
           title="Certifications"
-          subtitle="Certified specializations in LLM Engineering, Data Analysis using Python, and Tableau dashboards."
         />
 
         <motion.div

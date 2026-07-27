@@ -54,7 +54,7 @@ export const HeroSection: React.FC = () => {
             variants={fadeInUp}
             className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed"
           >
-            BCA Scholar at St. Joseph’s University (8.7 CGPA). Building responsive full-stack applications, conducting Green AI research, and leading 1,000+ attendee technical events as Cybernetics Club President.
+            BCA Scholar at St. Joseph’s University (8.7 CGPA). Building responsive full-stack applications, interested in Green AI research, and leading technical events as Cybernetics Club President.
           </motion.p>
 
           {/* Core Focus Pills */}
@@ -85,7 +85,7 @@ export const HeroSection: React.FC = () => {
                 icon={<Sparkles className="w-5 h-5" />}
                 onClick={() => scrollToSection('projects')}
               >
-                View Featured Projects
+                View Projects
               </Button>
             )}
 

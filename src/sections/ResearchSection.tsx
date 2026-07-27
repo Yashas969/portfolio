@@ -23,8 +23,7 @@ export const ResearchSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="Academic & Systems Research"
-          title="Sustainable Green AI Research"
-          subtitle="Empirical review analyzing energy consumption, carbon footprints, model distillation, and sustainable AI lifecycle governance."
+          title="Research"
         />
 
         <motion.div

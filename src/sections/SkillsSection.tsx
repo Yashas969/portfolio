@@ -53,7 +53,6 @@ export const SkillsSection: React.FC = () => {
         <SectionHeading
           badge="Technical Stack"
           title="Technical Skills & Capabilities"
-          subtitle="Categorized technical skillset across programming languages, web frameworks, artificial intelligence tools, databases, and analytics."
         />
 
         {/* Categorized Skills Grid */}

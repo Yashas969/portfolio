@@ -12,10 +12,9 @@ export const educationData: Education[] = [
     keyCoursework: [
       'Data Analysis using Python',
       'AI Tools (ChatGPT, LLMs)',
-      'Tableau & Data Visualization',
-      'Statistics & Probability',
-      'Database Systems (SQL / PostgreSQL)',
-      'Full-Stack Web Engineering',
+      'Data Visualization',
+      'Database Systems',
+      'Web Development',
     ],
     honors: [
       'Consistently maintained > 8.5 SGPA across all semesters',

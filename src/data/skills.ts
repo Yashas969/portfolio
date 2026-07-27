@@ -24,11 +24,13 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     id: 'libraries',
-    name: 'Libraries & Data Analysis',
+    name: 'Data Analysis and visualization',
     description: 'Scientific computing, data manipulation, and numerical analytical libraries.',
     skills: [
       { name: 'Pandas', category: 'Libraries', proficiency: 90, isFeatured: true, iconName: 'Table' },
       { name: 'NumPy', category: 'Libraries', proficiency: 86, isFeatured: true, iconName: 'Binary' },
+      { name: 'Tableau', category: 'Libraries', proficiency: 86, isFeatured: true, iconName: 'Binary' },
+
     ],
   },
   {
@@ -61,22 +63,6 @@ export const skillCategories: SkillCategory[] = [
       { name: 'VS Code & Cursor', category: 'Developer Tools', proficiency: 95, isFeatured: true, iconName: 'Code2' },
       { name: 'Antigravity', category: 'Developer Tools', proficiency: 90, isFeatured: true, iconName: 'Zap' },
       { name: 'Jupyter Notebook', category: 'Developer Tools', proficiency: 88, isFeatured: false, iconName: 'FileCode' },
-    ],
-  },
-  {
-    id: 'data-bi',
-    name: 'Data & BI Tools',
-    description: 'Data visualization, business intelligence dashboards, and exploratory data analysis.',
-    skills: [
-      { name: 'Tableau', category: 'Data & BI Tools', proficiency: 88, isFeatured: true, iconName: 'BarChart' },
-    ],
-  },
-  {
-    id: 'os',
-    name: 'Operating Systems',
-    description: 'Primary desktop and development platform environment.',
-    skills: [
-      { name: 'Windows', category: 'Operating Systems', proficiency: 96, isFeatured: true, iconName: 'Monitor' },
     ],
   },
 ];

@@ -14,6 +14,5 @@ export const researchData: ResearchPaper[] = [
     tags: ['Sustainable AI', 'Model Compression', 'Carbon Footprint', 'Distillation', 'Energy Efficiency'],
     publicationType: 'Conference Review',
     featured: true,
-    impactMetrics: 'Sole Author • International Conference Presentation',
   },
 ];

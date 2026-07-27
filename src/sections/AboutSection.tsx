@@ -16,8 +16,7 @@ export const AboutSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="Professional Background"
-          title="Engineering Foundations & Academic Performance"
-          subtitle="Combining academic excellence, full-stack software development, and active technical leadership."
+          title="Academics"
         />
 
         <motion.div
@@ -44,7 +43,7 @@ export const AboutSection: React.FC = () => {
             </p>
 
             <p className="text-slate-300 text-sm leading-relaxed">
-              My software engineering approach combines clean component composition, strict data-driven state isolation, and effective team coordination. Having served as Class Representative for 6 consecutive semesters and President of the Cybernetics Club, I understand the importance of clear communication, deadline accountability, and technical rigor.
+              My software engineering approach combines clean component composition, data-driven state isolation, and effective team coordination. Having served as Class Representative for 6 consecutive semesters and President of the Cybernetics Club, I understand the importance of clear communication, deadline accountability, and technical rigor.
             </p>
 
             {/* Spoken Languages & Availability Badges */}
