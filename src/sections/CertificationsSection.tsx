@@ -13,52 +13,55 @@ export const CertificationsSection: React.FC = () => {
   const safeCertifications = certificationsData ?? [];
 
   return (
-    <section id="certifications" className="py-24 relative z-10">
+    <section id="certifications" className="py-12 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="Verified Credentials"
+          badge="Credentials"
           title="Certifications"
+          subtitle="Specializations in LLM Engineering, Data Analysis, MongoDB databases, and AWS Cloud foundations."
         />
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
         >
           {safeCertifications.map((cert) => (
-            <GlassCard key={cert.id} variants={fadeInUp} className="flex flex-col justify-between space-y-4">
+            <GlassCard key={cert.id} variants={fadeInUp} className="flex flex-col justify-between p-6 space-y-4">
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-[#3E505B] text-[#8AB0AB] border border-[#8AB0AB]/30">
+                  <div className="p-2.5 rounded-lg bg-[#123524]/10 text-[#123524]">
                     <ShieldCheck className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-white">{cert.title}</h3>
-                    <p className="text-xs text-[#8AB0AB] font-semibold">{cert.issuer}</p>
+                    <h3 className="text-base font-bold text-[#171A18]">{cert.title}</h3>
+                    <p className="text-xs text-[#123524] font-semibold">{cert.issuer}</p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2 text-xs text-slate-300 font-mono">
-                  <Calendar className="w-3.5 h-3.5 text-slate-400" />
-                  <span>Issued: {cert.issueDate}</span>
-                </div>
+                {cert.issueDate && (
+                  <div className="flex items-center gap-2 text-xs text-slate-500 font-mono">
+                    <Calendar className="w-3.5 h-3.5 text-slate-500" />
+                    <span>Issued: {cert.issueDate}</span>
+                  </div>
+                )}
 
                 <div className="flex flex-wrap gap-1.5 pt-1">
                   {cert.skills?.map((skill) => (
-                    <Badge key={skill} variant="slate" size="sm">
+                    <Badge key={skill} size="sm">
                       {skill}
                     </Badge>
                   ))}
                 </div>
               </div>
 
-              {/* View Certificate Action Only (Opens Google Drive link in new tab, NO Verify Link, NO Download) */}
-              <div className="pt-3 border-t border-[#8AB0AB]/20 flex items-center justify-end">
+              {/* View Certificate Action (Opens Google Drive link in new tab) */}
+              <div className="pt-3 border-t border-[#E2E4DF] flex items-center justify-end">
                 {cert.pdfUrl && (
                   <Button
-                    variant="outline"
+                    variant="primary"
                     size="sm"
                     icon={<ExternalLink className="w-3.5 h-3.5" />}
                     onClick={() => window.open(getViewUrl(cert.pdfUrl!), '_blank', 'noopener,noreferrer')}

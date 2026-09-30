@@ -7,17 +7,17 @@ export const portfolioConfig: PortfolioConfig = {
   author: {
     name: 'Yashas R',
     role: 'Full Stack Developer & AI Scholar',
-    tagline: 'Building web applications, exploring Sustainable Green AI, and leading technical initiatives.',
-    bio: 'Computer Applications scholar at St. Joseph’s University (8.7 CGPA). Experienced in web development (React, Vite, Node.js, PostgreSQL, Supabase), AI/ML tools, and empirical research on Green AI ecosystems.',
+    tagline: 'Computer Applications scholar at St. Joseph’s University.',
+    bio: 'Computer Applications scholar at St. Joseph’s University. Interested in AI/ML, web development, and empirical research on Green AI ecosystems.',
     avatar: filesConfig.images.avatar,
     location: 'Bengaluru, India',
     email: 'yashas2202@gmail.com',
-    statusText: 'Open for Developer & AI Internships',
-    isAvailableForHire: true,
+    statusText: '',
+    isAvailableForHire: false,
     resumeUrl: filesConfig.resume.url,
   },
   seo: {
-    description: 'Portfolio of Yashas R showcasing projects, research, leadership, and technical skills.',
+    description: 'Personal portfolio of Yashas R showcasing web development projects, Green AI research, leadership, and technical skills.',
     keywords: [
       'Yashas R',
       'Full Stack Developer',
@@ -34,9 +34,9 @@ export const portfolioConfig: PortfolioConfig = {
     twitterHandle: '@yashas_dev',
   },
   accentColors: {
-    primary: '#8AB0AB', // Muted Teal
-    secondary: '#3E505B', // Charcoal Blue
-    glow: 'rgba(138, 176, 171, 0.15)',
+    primary: '#26413C', // Deep Green
+    secondary: '#1A1D1A', // Dark Neutral
+    glow: 'rgba(38, 65, 60, 0.2)',
   },
   featureFlags: {
     showProjects: true,

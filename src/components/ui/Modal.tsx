@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
-import { modalVariants } from '../../animations/variants';
 
 export interface ModalProps {
   isOpen: boolean;
@@ -19,15 +18,18 @@ export const Modal: React.FC<ModalProps> = ({
   maxWidth = 'max-w-2xl',
 }) => {
   useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
     if (isOpen) {
       document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
+      window.addEventListener('keydown', handleKeyDown);
     }
     return () => {
       document.body.style.overflow = 'unset';
+      window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isOpen]);
+  }, [isOpen, onClose]);
 
   return (
     <AnimatePresence>
@@ -35,7 +37,7 @@ export const Modal: React.FC<ModalProps> = ({
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
           {/* Backdrop */}
           <motion.div
-            className="fixed inset-0 bg-slate-950/80 backdrop-blur-md"
+            className="fixed inset-0 bg-[#171A18]/60 backdrop-blur-xs"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -44,23 +46,27 @@ export const Modal: React.FC<ModalProps> = ({
 
           {/* Modal Card */}
           <motion.div
-            className={`relative w-full ${maxWidth} bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl p-6 sm:p-8 z-10 my-8`}
-            variants={modalVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
+            className={`relative w-full ${maxWidth} bg-[#FAFAF8] border border-[#E2E4DF] rounded-xl shadow-xl p-6 z-10 space-y-4`}
+            initial={{ opacity: 0, scale: 0.95, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 10 }}
+            transition={{ duration: 0.2 }}
           >
-            <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-800">
-              {title && <h3 className="text-xl font-semibold text-white">{title}</h3>}
+            <div className="flex items-center justify-between pb-3 border-b border-[#E2E4DF]">
+              {title ? (
+                <h3 className="text-lg font-bold text-[#171A18]">{title}</h3>
+              ) : (
+                <div />
+              )}
               <button
                 onClick={onClose}
-                className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors ml-auto"
+                className="p-1.5 rounded-lg text-slate-500 hover:text-[#171A18] hover:bg-[#123524]/10 transition-colors"
                 aria-label="Close modal"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
-            <div className="max-h-[75vh] overflow-y-auto pr-1">{children}</div>
+            {children}
           </motion.div>
         </div>
       )}

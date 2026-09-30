@@ -17,8 +17,8 @@ export const GlassCard: React.FC<GlassCardProps> = ({
   return (
     <motion.div
       className={cn(
-        'glass-panel rounded-2xl p-6 transition-all duration-300 relative overflow-hidden',
-        hoverEffect && 'glass-panel-hover',
+        'editorial-card p-6 relative overflow-hidden',
+        hoverEffect && 'editorial-card-hover',
         className
       )}
       {...props}

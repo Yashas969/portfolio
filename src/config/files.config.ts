@@ -43,6 +43,18 @@ export const filesConfig = {
       issuer: 'Udemy',
       pdfUrl: 'https://drive.google.com/file/d/1t-iJ3x0xsk9MV1Ka-PTUjVUTor2ofS_L/view?usp=drive_link',
     },
+    {
+      id: 'cert-mongodb',
+      title: 'Introduction to MongoDB for Students',
+      issuer: 'MongoDB University',
+      pdfUrl: 'https://drive.google.com/file/d/1Uf2Wn59jfuQve5Xg7RBzEoWvLe186J66/view?usp=sharing',
+    },
+    {
+      id: 'cert-aws',
+      title: 'AWS Cloud Foundations',
+      issuer: 'Amazon Web Services (AWS)',
+      pdfUrl: 'https://drive.google.com/file/d/1VuowFhGiX4on24wpMJY7THPXyWp1UML6/view?usp=sharing',
+    },
   ],
 
   // Images & Media Assets

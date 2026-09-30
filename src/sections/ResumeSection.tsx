@@ -16,7 +16,9 @@ export const ResumeSection: React.FC = () => {
     <section id="resume" className="py-24 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
+          badge="Curriculum Vitae"
           title="Resume"
+          subtitle="View Yashas R's verified resume document."
         />
 
         <motion.div
@@ -26,25 +28,25 @@ export const ResumeSection: React.FC = () => {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <GlassCard className="p-8 sm:p-10 space-y-8 border-2 border-[#8AB0AB]/30 bg-[#26413C]/80">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-[#8AB0AB]/20">
+          <GlassCard className="p-6 sm:p-8 space-y-6">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-[#E2E4DF]">
               <div className="flex items-center gap-4">
-                <div className="p-3.5 rounded-2xl bg-[#3E505B] border border-[#8AB0AB]/30 text-[#8AB0AB]">
-                  <FileText className="w-8 h-8" />
+                <div className="p-3 rounded-lg bg-[#123524]/10 text-[#123524]">
+                  <FileText className="w-7 h-7 text-[#123524]" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">
+                  <h3 className="text-xl font-bold text-[#171A18]">
                     {filesConfig.resume.title}
                   </h3>
-                  <p className="text-xs text-slate-300 mt-1">
-                    PDF Format • Preview or Open in Browser
+                  <p className="text-xs text-slate-500 mt-0.5">
+                    Google Drive Document • View in Browser
                   </p>
                 </div>
               </div>
 
               <div className="flex flex-wrap items-center gap-3">
                 <Button
-                  variant="glow"
+                  variant="primary"
                   size="md"
                   icon={<Eye className="w-4 h-4" />}
                   onClick={() => setIsPreviewOpen(true)}
@@ -54,47 +56,47 @@ export const ResumeSection: React.FC = () => {
                 <Button
                   variant="secondary"
                   size="md"
-                  icon={<ExternalLink className="w-4 h-4 text-slate-300" />}
-                  onClick={() => window.open(getViewUrl(filesConfig.resume.url), '_blank')}
+                  icon={<ExternalLink className="w-4 h-4 text-slate-600" />}
+                  onClick={() => window.open(getViewUrl(filesConfig.resume.url), '_blank', 'noopener,noreferrer')}
                 >
                   View Resume
                 </Button>
               </div>
             </div>
 
-            {/* Quick Resume Highlights */}
+            {/* Resume Highlights Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="p-4 rounded-xl bg-[#1A1D1A] border border-[#8AB0AB]/20 space-y-1.5">
-                <h4 className="text-xs font-semibold text-[#8AB0AB] uppercase tracking-wider">
-                  Education & GPA
+              <div className="p-4 rounded-lg bg-[#FAFAF8] border border-[#E2E4DF] space-y-1">
+                <h4 className="text-xs font-semibold text-[#123524] uppercase tracking-wider">
+                  Education
                 </h4>
-                <p className="text-xs text-white font-semibold">St. Joseph's University (BCA)</p>
-                <p className="text-xs text-slate-300">CGPA: 8.7 </p>
-                <p className="text-xs text-slate-400">PUC: 96.7% | SSLC: 95%</p>
+                <p className="text-xs text-[#171A18] font-semibold">St. Joseph's University (BCA)</p>
+                <p className="text-xs text-slate-600">CGPA: 8.7</p>
+                <p className="text-xs text-slate-500">PUC: 96.7% | SSLC: 95%</p>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#1A1D1A] border border-[#8AB0AB]/20 space-y-1.5">
-                <h4 className="text-xs font-semibold text-[#8AB0AB] uppercase tracking-wider">
+              <div className="p-4 rounded-lg bg-[#FAFAF8] border border-[#E2E4DF] space-y-1">
+                <h4 className="text-xs font-semibold text-[#123524] uppercase tracking-wider">
                   Featured Projects
                 </h4>
-                <p className="text-xs text-white font-semibold">FinTrack (React, Vite, Supabase)</p>
-                <p className="text-xs text-slate-300">Student Notes DB (Hackathon PERN)</p>
-                <p className="text-xs text-slate-400">Full-stack web applications</p>
+                <p className="text-xs text-[#171A18] font-semibold">FinTrack (React, Supabase)</p>
+                <p className="text-xs text-slate-600">Student Notes DB (PERN Stack)</p>
+                <p className="text-xs text-slate-500">Full-stack web applications</p>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#1A1D1A] border border-[#8AB0AB]/20 space-y-1.5">
-                <h4 className="text-xs font-semibold text-[#8AB0AB] uppercase tracking-wider">
+              <div className="p-4 rounded-lg bg-[#FAFAF8] border border-[#E2E4DF] space-y-1">
+                <h4 className="text-xs font-semibold text-[#123524] uppercase tracking-wider">
                   Leadership & Research
                 </h4>
-                <p className="text-xs text-white font-semibold">President, Cybernetics Club</p>
-                <p className="text-xs text-slate-300">Class Rep (6 consecutive terms)</p>
-                <p className="text-xs text-slate-400">Green AI Research Paper Author</p>
+                <p className="text-xs text-[#171A18] font-semibold">President, Cybernetics Club</p>
+                <p className="text-xs text-slate-600">Class Rep (6 semesters)</p>
+                <p className="text-xs text-slate-500">Green AI Research Author</p>
               </div>
             </div>
           </GlassCard>
         </motion.div>
 
-        {/* Embedded Resume Viewer Modal (View Only) */}
+        {/* Embedded Resume Viewer Modal */}
         {isPreviewOpen && (
           <Modal
             isOpen={isPreviewOpen}
@@ -103,7 +105,7 @@ export const ResumeSection: React.FC = () => {
             maxWidth="max-w-4xl"
           >
             <div className="space-y-4">
-              <div className="w-full h-[65vh] rounded-xl bg-[#1A1D1A] border border-[#8AB0AB]/20 overflow-hidden flex items-center justify-center">
+              <div className="w-full h-[65vh] rounded-lg bg-[#FAFAF8] border border-[#E2E4DF] overflow-hidden flex items-center justify-center">
                 <iframe
                   src={getEmbedUrl(filesConfig.resume.url)}
                   title="Resume PDF Preview"
@@ -115,7 +117,7 @@ export const ResumeSection: React.FC = () => {
                   variant="secondary"
                   size="md"
                   icon={<ExternalLink className="w-4 h-4" />}
-                  onClick={() => window.open(getViewUrl(filesConfig.resume.url), '_blank')}
+                  onClick={() => window.open(getViewUrl(filesConfig.resume.url), '_blank', 'noopener,noreferrer')}
                 >
                   View Resume in Google Drive
                 </Button>

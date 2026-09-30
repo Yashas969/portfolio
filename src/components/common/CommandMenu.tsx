@@ -16,17 +16,17 @@ export const CommandMenu: React.FC<CommandMenuProps> = ({ isOpen, onClose }) => 
   const getTypeIcon = (type: SearchResultItem['type']) => {
     switch (type) {
       case 'project':
-        return <Code2 className="w-4 h-4 text-[#8AB0AB]" />;
+        return <Code2 className="w-4 h-4 text-[#123524]" />;
       case 'skill':
-        return <Code2 className="w-4 h-4 text-cyan-400" />;
+        return <Code2 className="w-4 h-4 text-[#123524]" />;
       case 'research':
-        return <Brain className="w-4 h-4 text-purple-400" />;
+        return <Brain className="w-4 h-4 text-[#123524]" />;
       case 'leadership':
-        return <Users className="w-4 h-4 text-amber-400" />;
+        return <Users className="w-4 h-4 text-[#123524]" />;
       case 'certification':
-        return <ShieldCheck className="w-4 h-4 text-emerald-400" />;
+        return <ShieldCheck className="w-4 h-4 text-[#123524]" />;
       default:
-        return <Code2 className="w-4 h-4 text-slate-400" />;
+        return <Code2 className="w-4 h-4 text-slate-500" />;
     }
   };
 
@@ -51,7 +51,7 @@ export const CommandMenu: React.FC<CommandMenuProps> = ({ isOpen, onClose }) => 
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Type to search FinTrack, Green AI, Python, Leadership..."
-            className="w-full pl-11 pr-4 py-3 bg-[#1A1D1A] border border-[#8AB0AB]/20 rounded-xl text-white placeholder-slate-400 text-sm focus:outline-none focus:border-[#8AB0AB] transition-colors"
+            className="w-full pl-11 pr-4 py-3 bg-[#FFFFFF] border border-[#E2E4DF] rounded-lg text-[#171A18] placeholder-slate-400 text-sm focus:outline-none focus:border-[#123524] transition-colors"
             autoFocus
           />
         </div>
@@ -59,14 +59,14 @@ export const CommandMenu: React.FC<CommandMenuProps> = ({ isOpen, onClose }) => 
         {/* Results List */}
         <div className="space-y-2 min-h-[220px]">
           {query.trim() === '' ? (
-            <div className="py-10 text-center text-slate-400 text-sm">
+            <div className="py-10 text-center text-slate-500 text-sm">
               Start typing to search across projects, skills, research papers, and leadership positions.
               <div className="mt-4 flex flex-wrap justify-center gap-2">
                 {['FinTrack', 'Green AI', 'Python', 'Supabase', 'Cybernetics Club'].map((tag) => (
                   <button
                     key={tag}
                     onClick={() => setQuery(tag)}
-                    className="px-2.5 py-1 rounded-lg bg-[#26413C] text-slate-200 hover:text-white text-xs transition-colors cursor-pointer border border-[#8AB0AB]/20"
+                    className="px-2.5 py-1 rounded-md bg-[#FFFFFF] text-slate-700 hover:text-[#123524] text-xs transition-colors cursor-pointer border border-[#E2E4DF]"
                   >
                     {tag}
                   </button>
@@ -74,8 +74,8 @@ export const CommandMenu: React.FC<CommandMenuProps> = ({ isOpen, onClose }) => 
               </div>
             </div>
           ) : results.length === 0 ? (
-            <div className="py-12 text-center text-slate-400 text-sm">
-              No matching records found for "<span className="text-white">{query}</span>".
+            <div className="py-12 text-center text-slate-500 text-sm">
+              No matching records found for "<span className="text-[#171A18] font-semibold">{query}</span>".
             </div>
           ) : (
             <div className="space-y-1.5 max-h-[320px] overflow-y-auto pr-1">
@@ -83,31 +83,31 @@ export const CommandMenu: React.FC<CommandMenuProps> = ({ isOpen, onClose }) => 
                 <div
                   key={item.id}
                   onClick={() => handleSelect(item)}
-                  className="flex items-center justify-between p-3 rounded-xl bg-[#1A1D1A] hover:bg-[#26413C] border border-[#8AB0AB]/20 hover:border-[#8AB0AB]/50 transition-all cursor-pointer group"
+                  className="flex items-center justify-between p-3 rounded-lg bg-[#FFFFFF] hover:bg-[#123524]/5 border border-[#E2E4DF] hover:border-[#123524]/40 transition-all cursor-pointer group"
                 >
                   <div className="flex items-center gap-3 overflow-hidden">
-                    <div className="p-2 rounded-lg bg-[#26413C] border border-[#8AB0AB]/20 shrink-0">
+                    <div className="p-2 rounded-md bg-[#FAFAF8] border border-[#E2E4DF] shrink-0">
                       {getTypeIcon(item.type)}
                     </div>
                     <div className="truncate">
-                      <h4 className="text-sm font-medium text-slate-200 group-hover:text-[#8AB0AB] truncate transition-colors">
+                      <h4 className="text-sm font-semibold text-[#171A18] group-hover:text-[#123524] truncate transition-colors">
                         {item.title}
                       </h4>
-                      <p className="text-xs text-slate-400 truncate">{item.subtitle}</p>
+                      <p className="text-xs text-slate-500 truncate">{item.subtitle}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 shrink-0">
                     <div className="hidden sm:flex items-center gap-1">
                       {item.tags?.slice(0, 2).map((t) => (
-                        <span key={t} className="px-2 py-0.5 text-[10px] bg-[#03120E] text-slate-300 rounded border border-[#8AB0AB]/15">
+                        <span key={t} className="px-2 py-0.5 text-[10px] bg-[#FAFAF8] text-slate-600 rounded border border-[#E2E4DF]">
                           {t}
                         </span>
                       ))}
                     </div>
                     {item.url?.startsWith('http') ? (
-                      <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-white" />
+                      <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-[#123524]" />
                     ) : (
-                      <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-[#8AB0AB] transition-colors" />
+                      <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-[#123524] transition-colors" />
                     )}
                   </div>
                 </div>
