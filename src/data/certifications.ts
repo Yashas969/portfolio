@@ -24,7 +24,7 @@ export const certificationsData: Certification[] = [
   },
   {
     id: 'cert-3',
-    title: 'Introduction to MongoDB for Students',
+    title: 'Introduction to MongoDB',
     issuer: 'MongoDB University',
     issueDate: '2025-10-10',
     credentialUrl: '',

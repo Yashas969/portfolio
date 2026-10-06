@@ -35,13 +35,13 @@ export const filesConfig = {
       id: 'cert-llm-eng',
       title: 'LLM Engineering',
       issuer: 'Udemy',
-      pdfUrl: 'https://drive.google.com/file/d/1ExampleDriveCertLlmId/view?usp=sharing',
+      pdfUrl: 'https://drive.google.com/file/d/1Av4AXLj9aQjtuH9f3IyivTL4RPk91QfY/view?usp=drive_link',
     },
     {
       id: 'cert-data-analysis',
       title: 'Data Analysis using Python, AI, and Tableau',
       issuer: 'Udemy',
-      pdfUrl: 'https://drive.google.com/file/d/1t-iJ3x0xsk9MV1Ka-PTUjVUTor2ofS_L/view?usp=drive_link',
+      pdfUrl: 'https://drive.google.com/file/d/1Q8gow2YnagmJVTh4mp3m5eqSrUqGFoEp/view?usp=sharing',
     },
     {
       id: 'cert-mongodb',
